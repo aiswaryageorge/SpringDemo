@@ -10,6 +10,9 @@
             <property name="gender" value="male"/>
             <property name="age" value="39"/>
         </bean>
+        <bean id="movie" class="com.stackroute.domain.Movie">
+            <property name="actor" ref="actor"/>
+        </bean>-->
 
     <bean id="actor1" class="com.stackroute.domain.Actor">
         <property name="name" value="Anushka"/>
@@ -17,21 +20,27 @@
         <property name="age" value="39"/>
     </bean>
 
-    <bean id="movie" class="com.stackroute.domain.Movie">
-            <property name="actor" ref="actor"/>
-        </bean>
-    <bean id="movie1" class="com.stackroute.domain.Movie">
+
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName">
         <property name="actor" ref="actor1"/>
-    </bean>-->
+    </bean>
+    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType">
+        <property name="actor" ref="actor1"/>
+    </bean>
 
 
 
-    <bean id="actor1" class="com.stackroute.domain.Actor">
+   <!-- <bean id="actor1" class="com.stackroute.domain.Actor">
         <constructor-arg name="name" value="rasikhanna"/>
         <constructor-arg name="gender" value="female"/>
         <constructor-arg name="age" value="20"/>
+    </bean>-->
+
+       <!-- <constructor-arg name="actor" ref="actor1"/>
     </bean>
-    <bean id="movie1" class="com.stackroute.domain.Movie"  scope="prototype">
-        <constructor-arg name="actor" ref="actor1"/>
-    </bean>
-    </beans>
+-->
+
+    <!-- <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
+          <property name="actor" ref="actor1"/>
+     </bean>-->
+        </beans>

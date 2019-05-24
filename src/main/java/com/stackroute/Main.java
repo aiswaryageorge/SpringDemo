@@ -11,9 +11,9 @@ package com.stackroute;
 public class Main {
 
     public static void main(String[] args) {
-        ClassPathResource resource = new ClassPathResource("beans.xml");
+       /* ClassPathResource resource = new ClassPathResource("beans.xml");
         BeanFactory factory = new XmlBeanFactory(resource);
-
+*/
        /* Movie movie = (Movie) factory.getBean("movie");
         System.out.println("movie actor details : " + movie);
 
@@ -32,13 +32,16 @@ public class Main {
 
         //testing bean scope
         ApplicationContext context1=new ClassPathXmlApplicationContext( "beans.xml");
-        Movie movie3=(Movie) context1.getBean("movie1");
+      /*  Movie movie3=(Movie) context1.getBean("movie1");
         Movie movie4=(Movie) context1.getBean("movie1");
 
-        System.out.println(movie3==movie4);
+        System.out.println(movie3==movie4);*/
 
-        Movie movie = (Movie) context1.getBean("movieA");
+        Movie movie = (Movie) context1.getBean("movie1");
         System.out.println("changing the id of beans:"+ movie);
+
+        Movie movie1 = (Movie) context1.getBean("movie1");
+        System.out.println("changing the id of beans:"+ movie1);
 
 
     }
