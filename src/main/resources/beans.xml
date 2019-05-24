@@ -34,4 +34,9 @@
     <bean id="movie1" class="com.stackroute.domain.Movie"  scope="prototype">
         <constructor-arg name="actor" ref="actor1"/>
     </bean>
-    </beans>
+
+
+     <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
+          <property name="actor" ref="actor1"/>
+     </bean>
+        </beans>

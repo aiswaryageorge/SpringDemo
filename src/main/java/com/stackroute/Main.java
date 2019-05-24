@@ -1,11 +1,8 @@
 package com.stackroute;
 
+        import com.stackroute.domain.Actor;
         import com.stackroute.domain.Movie;
         import org.springframework.beans.factory.BeanFactory;
-        import org.springframework.beans.factory.support.BeanDefinitionReader;
-        import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-        import org.springframework.beans.factory.support.DefaultListableBeanFactory;
-        import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
         import org.springframework.beans.factory.xml.XmlBeanFactory;
         import org.springframework.context.ApplicationContext;
         import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -39,6 +36,9 @@ public class Main {
         Movie movie4=(Movie) context1.getBean("movie1");
 
         System.out.println(movie3==movie4);
+
+        Movie movie = (Movie) context1.getBean("movieA");
+        System.out.println("changing the id of beans:"+ movie);
 
 
     }
