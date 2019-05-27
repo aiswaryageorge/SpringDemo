@@ -46,13 +46,5 @@
 </bean>
  <bean id="resourcesLoaderAwareDemo" class="com.stackroute.awareinterface.ResourcesLoaderAwareDemo">
 </bean>
-
-
-       <!-- <constructor-arg name="actor" ref="actor1"/>
-    </bean>
--->
-
-    <!-- <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
-          <property name="actor" ref="actor1"/>
-     </bean>-->
+    <bean id="beanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"/>
         </beans>
