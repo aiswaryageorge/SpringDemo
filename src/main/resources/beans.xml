@@ -14,33 +14,37 @@
             <property name="actor" ref="actor"/>
         </bean>-->
 
-    <bean id="actor1" class="com.stackroute.domain.Actor">
+   <!-- <bean id="actor1" class="com.stackroute.domain.Actor">
         <property name="name" value="Anushka"/>
         <property name="gender" value="female"/>
         <property name="age" value="39"/>
     </bean>
 
 
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byName">
+    <bean id="movie1" class="com.stackroute.domain.Movie">
         <property name="actor" ref="actor1"/>
-    </bean>
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="byType">
-        <property name="actor" ref="actor1"/>
-    </bean>
-
-
-
-   <!-- <bean id="actor1" class="com.stackroute.domain.Actor">
-        <constructor-arg name="name" value="rasikhanna"/>
-        <constructor-arg name="gender" value="female"/>
-        <constructor-arg name="age" value="20"/>
     </bean>-->
-
-       <!-- <constructor-arg name="actor" ref="actor1"/>
+    <bean id="movie1" class="com.stackroute.domain.Movie" >
+        <property name="actor" ref="actor1"/>
     </bean>
--->
 
-    <!-- <bean name="movieA,movieB" class="com.stackroute.domain.Movie" scope="prototype">
-          <property name="actor" ref="actor1"/>
-     </bean>-->
+     <bean id="actor1" class="com.stackroute.domain.Actor">
+       <constructor-arg name="name" value="rasikhanna"/>
+       <constructor-arg name="gender" value="female"/>
+       <constructor-arg name="age" value="20"/>
+   </bean>
+
+
+    <bean id="applicationContextAwareDemo" class="com.stackroute.awareinterface.ApplicationContextAwareDemo" >
+
+    </bean>
+    <bean id="beanFactoryAwareDemo" class="com.stackroute.awareinterface.BeanFactoryAwareDemo">
+
+    </bean>
+
+ <bean id="beanNameAwareDemo" class="com.stackroute.awareinterface.BeanNameAwareDemo">
+</bean>
+ <bean id="resourcesLoaderAwareDemo" class="com.stackroute.awareinterface.ResourcesLoaderAwareDemo">
+</bean>
+    <bean id="beanLifecycleDemoBean" class="com.stackroute.demo.BeanLifecycleDemoBean"/>
         </beans>
